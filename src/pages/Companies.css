@@ -1,0 +1,92 @@
+.companies-container {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+.companies-header {
+    margin-bottom: 8px;
+}
+
+.companies-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 24px;
+}
+
+.company-card {
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    overflow: hidden;
+}
+
+.company-card-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 32px 24px 24px;
+    background-color: var(--color-bg-main);
+    border-bottom: 1px solid var(--color-border);
+}
+
+.company-logo-large {
+    width: 64px;
+    height: 64px;
+    border-radius: var(--radius-md);
+    object-fit: cover;
+    border: 1px solid var(--color-border);
+    margin-bottom: 16px;
+    background-color: white;
+    padding: 4px;
+}
+
+.company-name {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--color-text-main);
+    margin-bottom: 4px;
+}
+
+.company-locations {
+    font-size: 13px;
+    color: var(--color-text-muted);
+}
+
+.company-stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 24px;
+}
+
+.c-stat {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 4px;
+}
+
+.c-stat-label {
+    font-size: 12px;
+    text-transform: uppercase;
+    color: var(--color-text-muted);
+    font-weight: 600;
+}
+
+.c-stat-value {
+    font-size: 20px;
+    font-weight: 700;
+    color: var(--color-text-main);
+}
+
+.c-stat-offer {
+    color: var(--color-success);
+}
+
+.company-card-footer {
+    padding: 16px;
+    border-top: 1px solid var(--color-border);
+    display: flex;
+    justify-content: center;
+    background-color: var(--color-bg-main);
+}
