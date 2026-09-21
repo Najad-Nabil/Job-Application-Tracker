@@ -15,6 +15,7 @@ const Register = () => {
         confirmPassword: ''
     });
     const [error, setError] = useState('');
+    const [successMessage, setSuccessMessage] = useState('');
     const [isSubmitting, setIsSubmitting] = useState(false);
     const [agreedToTerms, setAgreedToTerms] = useState(false);
 
@@ -40,6 +41,7 @@ const Register = () => {
     const handleSubmit = async (e) => {
         e.preventDefault();
         setError('');
+        setSuccessMessage('');
 
         if (!formData.name || !formData.email || !formData.password || !formData.confirmPassword) {
             setError('Please fill in all fields');
@@ -60,6 +62,11 @@ const Register = () => {
         const result = await register(formData.name, formData.email, formData.password);
         setIsSubmitting(false);
 
+        if (result.success && result.requiresEmailConfirmation) {
+            setSuccessMessage('Account created. Please check your email to confirm your account before signing in.');
+            return;
+        }
+
         if (result.success) {
             navigate('/dashboard');
         } else {
@@ -74,6 +81,12 @@ const Register = () => {
         >
             <form onSubmit={handleSubmit} className="auth-form">
                 {error && <div className="auth-error-banner animate-fade-in">{error}</div>}
+
+                {successMessage && (
+                    <div className="auth-success-banner animate-fade-in">
+                        {successMessage}
+                    </div>
+                )}
 
                 <Input
                     label="Full name"
