@@ -1,5 +1,5 @@
 import React from 'react';
-import { Building2, Users } from 'lucide-react';
+import { Users } from 'lucide-react';
 import { Card } from '../components/ui/Card';
 import { MOCK_COMPANIES } from '../data/mockData';
 import './Companies.css';

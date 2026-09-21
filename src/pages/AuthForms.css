@@ -54,6 +54,14 @@
     text-decoration: underline;
 }
 
+.auth-link-button {
+    padding: 0;
+    border: 0;
+    background: transparent;
+    cursor: pointer;
+    font: inherit;
+}
+
 .auth-redirect {
     margin-top: 32px;
     text-align: center;

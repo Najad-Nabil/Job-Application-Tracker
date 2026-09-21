@@ -1,6 +1,6 @@
 import React from 'react';
 import { useParams, useNavigate, Link } from 'react-router-dom';
-import { ArrowLeft, Edit3, Trash2, Globe, MapPin, Building, Briefcase, Calendar, Banknote } from 'lucide-react';
+import { ArrowLeft, Edit3, Trash2, Globe, MapPin, Building, Briefcase, Banknote } from 'lucide-react';
 import { Button } from '../components/ui/Button';
 import { Badge } from '../components/ui/Badge';
 import { Card } from '../components/ui/Card';

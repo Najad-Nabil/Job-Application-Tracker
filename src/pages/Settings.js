@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { User, Bell, Shield, Palette, Moon, Sun, Monitor, Check, Globe, Lock, Eye, EyeOff, Download, LogOut } from 'lucide-react';
+import { User, Bell, Shield, Palette, Moon, Sun, Monitor, Check, Download, LogOut } from 'lucide-react';
 import { useAuth } from '../auth/AuthContext';
 import { Card } from '../components/ui/Card';
 import { Input } from '../components/ui/Input';

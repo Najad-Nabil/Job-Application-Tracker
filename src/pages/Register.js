@@ -154,7 +154,7 @@ const Register = () => {
                             onChange={(e) => setAgreedToTerms(e.target.checked)}
                         />
                         <span className="checkbox-label">
-                            I agree to the <a href="#" className="auth-link">Terms</a> and <a href="#" className="auth-link">Privacy Policy</a>
+                            I agree to the <button type="button" className="auth-link auth-link-button">Terms</button> and <button type="button" className="auth-link auth-link-button">Privacy Policy</button>
                         </span>
                     </label>
                 </div>
